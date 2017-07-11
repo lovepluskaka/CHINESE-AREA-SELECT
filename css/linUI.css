@@ -1,0 +1,186 @@
+input:focus,
+a:focus,
+texarea:focus {
+    outline: none
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.xtemplate,
+.xtemplate * {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #333;
+    border: none;
+}
+
+ul li {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #f35729;
+}
+
+.cl {
+    clear: both;
+}
+
+.fix {
+    *zoom: 1;
+}
+
+.fix:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+body {
+    background-color: #fff;
+    font: 14px "Microsoft Yahei", Arial, "Lantinghei SC", "Open Sans", "Hiragino Sans GB", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    color: #333;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('../fonts/iconfont.eot?t=20170610');
+    /* IE9*/
+    src: url('../fonts/iconfont.eot?t=20170610#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont.woff?t=20170610') format('woff'), /* chrome, firefox */
+    url('../fonts/iconfont.ttf?t=20170610') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg?t=20170610#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spot:before {
+    content: '\e60e';
+}
+
+
+/*select选择框样式*/
+
+.linUI-menu-select {
+    height: 30px;
+    border: 1px solid #e8e8e8;
+    min-width: 84px;
+    border-radius: 4px;
+    line-height: 30px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    padding-right: 23px;
+    display: inline-block;
+}
+
+.linUI-menu-select .menu-text {
+    font-size: 12px;
+    float: left;
+    margin-left: 10px;
+    max-width: 150px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.linUI-menu-select .icon-spot {
+    position: absolute;
+    width: 18px;
+    right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.linUI-menu-select .menu-body {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0, 0, 20, .2);
+    position: absolute;
+    width: 240px;
+    z-index: 100;
+    margin-top: 36px;
+    display: none
+}
+
+.linUI-menu-select .select .menu-body .menu-head {
+    border-bottom: 1px solid #e8e8e8;
+    text-align: left;
+}
+
+.linUI-menu-select .menu-body .menu-head .item {
+    text-align: left;
+    font-size: 14px;
+    color: #1a1a1a;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    display: block;
+}
+
+.linUI-menu-select .menu-list>ul {
+    padding: 10px 0;
+}
+
+.linUI-menu-select .menu-list ul li {
+    font-size: 12px;
+    position: relative;
+    text-align: left;
+}
+
+.linUI-menu-select .menu-list ul li .item {
+    display: block;
+    padding: 0 20px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.linUI-menu-select .menu-list ul li:hover>.sub-menu {
+    display: block
+}
+
+.linUI-menu-select .menu-list ul li .sub-menu {
+    background-color: #fff;
+    position: absolute;
+    left: 238px;
+    width: 210px;
+    z-index: 101;
+    border: 1px solid #e8e8e8;
+    padding: 5px 0;
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0, 0, 20, .2);
+    margin-top: -38px;
+    display: none;
+}

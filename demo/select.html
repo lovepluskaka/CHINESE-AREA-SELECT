@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>多选表单组件</title>
+    <link rel="stylesheet" href="../css/linUI.css">
+</head>
+
+<body>
+    <div style="text-align:center;margin-top:50px">
+        <div class="linUI-menu-select" style="margin:0 auto" id="selectId">
+            <p class="menu-text" role="text" data-value="">不限区域</p>
+            <i class="iconfont icon-spot"></i>
+            <div class="menu-body" style="width: 240px;">
+                <div class="menu-head">
+                    <a class="item" data-type="province" data-value="">不限区域</a>
+                </div>
+
+                <!--<div class="menu-list">
+                    <ul>
+                        <li>
+                            <a class="item" data-value="110000" data-type="province">北京市</a>
+                            <div class="sub-menu">
+                                <ul>
+                                    <li>
+                                        <a class="item" data-value="110100" data-type="province">北京市</a>
+                                        <div class="sub-menu" style="margin-left: -28px;">
+                                            <ul>
+
+                                                <li><a class="item" data-value="110101" data-type="province">东城区</a></li>
+                                                <li><a class="item" data-value="110102" data-type="province">西城区</a></li>
+                                                <li><a class="item" data-value="110105" data-type="province">朝阳区</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/areaTree.js"></script>
+    <script src="../js/areaUI.js"></script>
+    <script>
+        $(function() {
+            var beginSelect = new initSelect('#selectId', {
+                clickEvent: function(name, id) {
+                    console.log(name);
+                    console.log(id);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
