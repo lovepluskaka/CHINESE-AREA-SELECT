@@ -75,7 +75,7 @@ The function of callback has two parameter :```name```and ```id``` .
 
 ``name`` :The name of area which has been selected.
 
-```id```:The id of the area which has Benn selected.
+```id```:The id of the area which has Been selected.
 
 ## RESULT
 ![result](images/img.png)
