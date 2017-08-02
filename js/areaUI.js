@@ -1,13 +1,12 @@
 (function() {
-    var init = {},
-        defaultCallback = function(name, id) {
-            console.log(id + ':' + name);
-        };
+    var defaultCallback = function(name, id) {
+        console.log(id + ':' + name);
+    };
 
     function initSelect(Dom, param) {
         var $select = $(Dom);
 
-        init = {
+        this.init = {
             $select: $select, // jquery selector
             clickEvent: param.clickEvent || defaultCallback // callback
         }
@@ -49,11 +48,12 @@
             provincesDom = provincesDom.join('');
             var finnelDom = '<div class="menu-list"><ul>' + provincesDom + '</ul></div>';
 
-            init.$select.find('.menu-body').append(finnelDom);
+            $that.init.$select.find('.menu-body').append(finnelDom);
             $that.bindEvent();
         },
         bindEvent: function() {
-            var $select = init.$select;
+            var $select = this.init.$select,
+                $that = this;
             $select.on('click', function() {
                 $select.find('.menu-body').show();
             });
@@ -63,7 +63,7 @@
                 $select.find('.menu-text').text(newValue);
                 $select.find('.menu-text').data('value', newId);
                 $('.menu-body').hide();
-                init.clickEvent(newValue, newId);
+                $that.init.clickEvent(newValue, newId);
                 return false;
             });
         }
@@ -77,6 +77,10 @@
 
     if ($ && jQuery) {
         $.initSelect = jQuery.initSelect = initSelect;
+    }
+
+    if (typeof define === 'function' && define.amd) {
+        define("initSelect", [jQuery], function() {});
     }
 
 })();
